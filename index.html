@@ -11,7 +11,7 @@
 <section id="view-resultados" class="hidden"><div class="card"><h2>Introducir resultados reales</h2><p class="muted">Marca 1, X o 2 para cada partido terminado. Al guardar, se actualiza la clasificación.</p><div class="field"><label>Jornada</label><select id="resultJornada"></select></div><div id="resultMatches"></div><button id="saveResults">Guardar resultados</button></div></section>
 <p class="muted">Aviso: el acceso es público y sin contraseña; cualquiera con el enlace puede modificar datos.</p></main>
 <script>
-const URL='https://haowmcvnzjpetsnxyblt.supabase.co',KEY='sb_publishable_p5gTa0DIjFVqeCcCUUbyYA_-9D9F9in',db=supabase.createClient(URL,KEY);
+const SUPABASE_URL='https://haowmcvnzjpetsnxyblt.supabase.co',KEY='sb_publishable_p5gTa0DIjFVqeCcCUUbyYA_-9D9F9in',db=supabase.createClient(SUPABASE_URL,KEY);
 let jornadas=[],personas=[],partidos=[],picks=[],resultados=[],jid='',pid='';
 const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function msg(t,e=false){$('status').textContent=t;$('status').className='status'+(e?' error':'')}
